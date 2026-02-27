@@ -1,0 +1,49 @@
+use_bpm 120
+
+live_loop :snare do
+  sample :sn_dolf
+  sleep 2
+  sample :sn_dolf
+  sleep 2
+end
+
+live_loop :kick do
+  sleep 16 if tick == 0
+  sample :hat_bdu
+  sleep 1
+  sample :hat_bdu
+  sleep 0.5
+  sample :hat_bdu
+  sleep 0.5
+  sample :hat_bdu
+  sleep 1
+end
+
+live_loop :chords do
+  sleep 32 if tick == 0
+  play [:c3, :e3, :g3, :b3], sustain: 1
+  sleep 4
+  play [:c3, :e3, :g3, :b3], sustain: 1
+  sleep 4
+  play [:f3, :a3, :c4, :e4], sustain: 1
+  sleep 4
+  play [:f3, :a3, :c4, :e4], sustain: 1
+  sleep 4
+end
+
+live_loop :bass do
+  sleep 48 if tick == 0
+  use_synth :bass_foundation
+  play :g2, sustain: 6
+  sleep 6
+  play :b2, sustain: 1.5
+  sleep 1
+  play :a2, sustain: 6
+  sleep 6
+  play :b2, sustain: 0.5
+  sleep 0.5
+  play :a2, sustain: 0.5
+  sleep 0.5
+  play :g2, sustain: 1.5
+  sleep 2
+end
