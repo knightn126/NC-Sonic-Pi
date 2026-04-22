@@ -74,60 +74,60 @@ define :danLead do
   p5  1, 3
   p5  1, 3
   
-  pc  [:c5, :e5],  7
+  pc  [:c5, :e5], 7
   p5  4, 7
   p5s 2, 7
   p5  2, 5
   p5s 1, 5
   p5s 1, 5
-  pc  [:b5, :e5],  7
+  pc  [:b5, :e5], 7
   p5  4, 7
   p5  5, 5
   p5  4, 10
   
-  pc  [:e5, :b6],  7
-  pc  [:fs5, :a6], 7
-  pc  [:g5, :c6],  7
+  pc  [:e5, :b6], 7
+  pc  [:fs5, :a6],7
+  pc  [:g5, :c6], 7
   p6  6, 5
   p6  6, 4
   p6  5, 4
   p5  4, 4
   p5  4, 3
   
-  pc  [:g3, :b3, :e4],          5
+  pc  [:g3, :b3, :e4], 5
   p4  2, 3
-  pc  [:b3, :e4, :g4],         3
-  pc  [:b3, :e4, :g4],         3
-  pc  [:g3, :b3, :e4],         3
+  pc  [:b3, :e4, :g4], 3
+  pc  [:b3, :e4, :g4], 3
+  pc  [:g3, :b3, :e4], 3
   sleep sldr[3]
-  pc  [:a3, :b3, :ds4, :fs4],  3
-  pc  [:a3, :b3, :ds4, :fs4],  3
+  pc  [:a3, :b3, :ds4, :fs4], 3
+  pc  [:a3, :b3, :ds4, :fs4], 3
   p3  5, 3
-  pc  [:ds4, :fs4],            3
+  pc  [:ds4, :fs4], 3
   p3  5, 3
-  pc  [:a3, :ds4, :fs4],       3
-  pc  [:a3, :ds4, :fs4],       3
+  pc  [:a3, :ds4, :fs4], 3
+  pc  [:a3, :ds4, :fs4], 3
   sleep sldr[5]
-  pc  [:b3, :d4, :g4],         5
-  pc  [:d4, :g4, :b4],         3
+  pc  [:b3, :d4, :g4], 5
+  pc  [:d4, :g4, :b4], 3
   p3  6, 3
-  pc  [:d4, :g4, :b4],         3
+  pc  [:d4, :g4, :b4], 3
   p3  6, 3
   sleep sldr[3]
-  pc  [:a3, :g3, :cs4],        3
-  pc  [:a3, :g3, :cs4],        3
+  pc  [:a3, :g3, :cs4], 3
+  pc  [:a3, :g3, :cs4], 3
   p4s 0, 3
-  pc  [:a3, :cs4, :g4],        5
-  pc  [:e3, :g3, :c4],         5
+  pc  [:a3, :cs4, :g4], 5
+  pc  [:e3, :g3, :c4], 5
   sleep sldr[3]
-  pc  [:fs3, :a3, :d4],        3
-  pc  [:fs3, :a3, :d4],        3
+  pc  [:fs3, :a3, :d4], 3
+  pc  [:fs3, :a3, :d4], 3
   sleep sldr[3]
-  pc  [:g3, :b3, :e4],         5
+  pc  [:g3, :b3, :e4], 5
   sleep sldr[3]
-  pc  [:g3, :c4, :e4, :g4],    7
-  pc  [:g3, :c4, :e4, :g4],    5
-  pc  [:g3, :c4, :e4, :g4],    5
+  pc  [:g3, :c4, :e4, :g4], 7
+  pc  [:g3, :c4, :e4, :g4], 5
+  pc  [:g3, :c4, :e4, :g4], 5
   
   with_fx :level, amp: 1 do |kura_vol|
     in_thread { kuraLead }
@@ -189,23 +189,23 @@ define :danBass do
   p3  0, 3
   p3  0, 3
   
-  pc  [:d3, :fs3, :a3, :c4],  3
-  pc  [:d3, :fs3, :a3, :c4],  3
+  pc  [:d3, :fs3, :a3, :c4], 3
+  pc  [:d3, :fs3, :a3, :c4], 3
   p3  1, 3
   p3  1, 3
   p3  1, 5
   pc  [:ds3, :fs3, :a3, :c4], 7
-  pc  [:e3, :g3, :b3, :d4],   3
+  pc  [:e3, :g3, :b3, :d4], 3
   sleep sldr[5]
   
   pc  [:cs3, :fs3, :as4, :ds4], 5
   p3s 1, 3
   p3s 1, 3
-  pc  [:d3, :f3, :a3, :c4],   3
-  pc  [:d3, :f3, :a3, :c4],   5
-  pc  [:e3, :g3, :b3, :cs4],  5
-  pc  [:e3, :g3, :b3, :cs4],  3
-  pc  [:g2, :f3],               5
+  pc  [:d3, :f3, :a3, :c4], 3
+  pc  [:d3, :f3, :a3, :c4], 5
+  pc  [:e3, :g3, :b3, :cs4], 5
+  pc  [:e3, :g3, :b3, :cs4], 3
+  pc  [:g2, :f3], 5
   
   p2  0, 5
   p3  0, 5
@@ -236,37 +236,37 @@ define :danBass do
   p4s 0, 3
   p4  2, 3
   
-  pc  [:a3, :e4, :g4],        7
-  pc  [:b3, :fs4, :a4],       7
-  pc  [:c4, :g4],             7
+  pc  [:a3, :e4, :g4], 7
+  pc  [:b3, :fs4, :a4], 7
+  pc  [:c4, :g4], 7
   play note4[1]; sleep 0.1
   play note4[4]; sleep 0.1
   play note5[0]; sleep 0.1
   sleep sldr[8]
   
-  pc  [:c3, :c2],   5
+  pc  [:c3, :c2], 5
   p2  0, 3
   p3  0, 5
-  pc  [:d3, :d2],   3
-  pc  [:c3, :c2],   3
-  pc  [:b3, :b2],   3
-  pc  [:b3, :b2],   3
+  pc  [:d3, :d2], 3
+  pc  [:c3, :c2], 3
+  pc  [:b3, :b2], 3
+  pc  [:b3, :b2], 3
   p2  6, 3
   p3  6, 3
   p2  6, 3
   p2  6, 3
   p2  6, 3
-  pc  [:d3, :d2],   3
+  pc  [:d3, :d2], 3
   pc  [sharp3[1], sharp2[1]], 3
-  pc  [:e3, :e2],   5
+  pc  [:e3, :e2], 5
   p3  2, 3
   p2  2, 3
   p2  2, 3
   
-  pc  [:b3, :b2],             3
+  pc  [:b3, :b2], 3
   pc  [sharp3[4], sharp2[4]], 3
-  pc  [:a3, :a2],             3
-  pc  [:a3, :a2],             3
+  pc  [:a3, :a2], 3
+  pc  [:a3, :a2], 3
   p2  5, 3
   p3  5, 3
   p2  5, 3
@@ -274,14 +274,14 @@ define :danBass do
   p2  5, 3
   p3  5, 3
   p3  6, 3
-  pc  [:a3, :a2],             5
+  pc  [:a3, :a2], 5
   p2  6, 3
-  pc  [:b3, :b2],             3
-  pc  [:b3, :b2],             3
+  pc  [:b3, :b2], 3
+  pc  [:b3, :b2], 3
   p2  0, 3
-  pc  [:c2, :c3],             5
+  pc  [:c2, :c3], 5
   p2  1, 3
-  pc  [:d3, :d2],             5
+  pc  [:d3, :d2], 5
   p2  1, 3
   p2  1, 3
   p2  1, 7
