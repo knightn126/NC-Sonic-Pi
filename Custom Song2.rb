@@ -129,21 +129,28 @@ define :danLead do
   pc  [:g3, :c4, :e4, :g4],    5
   pc  [:g3, :c4, :e4, :g4],    5
   
-  in_thread do
-    kuraLead
+  with_fx :level, amp: 1 do |kura_vol|
+    in_thread { kuraLead }
+    in_thread { kuraBass }
+    in_thread do
+      sleep 19.5
+      sample kuraVocals
+    end
+    
+    
+    sleep 70
+    control kura_vol, amp: 0, amp_slide: 10
+    sleep 10
   end
-  in_thread do
-    sleep 19.5
-    sample kuraVocals
-  end
-  in_thread do
-    kuraBass
-  end
+  
   stop
+  
 end
 
 define :danBass do
+  
   use_synth :tri
+  
   sleep sldr[11]
   
   p3  0, 3
@@ -278,7 +285,9 @@ define :danBass do
   p2  1, 3
   p2  1, 3
   p2  1, 7
+  
   stop
+  
 end
 
 define :kuraLead do
@@ -523,18 +532,27 @@ define :kuraBass do
   p2s 4, 3
   sleep sldr[3]
   p1s 4, 3
+  
   stop
+  
 end
 
 in_thread do
+  
   danLead
+  
 end
 
 in_thread do
+  
   sleep 50
+  
   sample danVocals
+  
 end
 
 in_thread do
+  
   danBass
+  
 end
