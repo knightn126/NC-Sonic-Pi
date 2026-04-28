@@ -1,3 +1,5 @@
+#Dan + Kura
+
 use_bpm 188
 
 note1 = [:c1, :d1, :e1, :f1, :g1, :a1, :b1]
@@ -33,7 +35,10 @@ define :p6s do |i, b|; play sharp6[i]; sleep sldr[b]; end
 define :pc  do |chord, b|; play chord; sleep sldr[b]; end
 
 danVocals = "C:/Users/nathaniel_castillo/Downloads/DanDaDanVocals.mp3"
+
 kuraVocals = "C:/Users/nathaniel_castillo/Downloads/krkrvocals.mp3"
+
+kurasong = "C:/Users/nathaniel_castillo/Downloads/kurasong.wav"
 
 
 
@@ -135,12 +140,15 @@ define :danLead do
     in_thread do
       sleep 19.5
       sample kuraVocals
+      sleep 58
+      set_volume! 0.7
+      sample kurasong
     end
     
-    
-    sleep 70
+    sleep 210
     control kura_vol, amp: 0, amp_slide: 10
     sleep 10
+    
   end
   
   stop
